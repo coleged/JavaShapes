@@ -8,6 +8,11 @@ import java.util.Vector;
 */
 abstract public class Shape implements MyShapes {
 	
+	// enumerations for size comparison
+	final static int SMALLER 	= -1;
+	final static int SAME	  	=  0;
+	final static int LARGER  	=  1;
+	
 	/** shape type
 	*
 	*	{@link #CIRCLE}
@@ -31,19 +36,18 @@ abstract public class Shape implements MyShapes {
 	
 	private String 		name;
 	
-	shapeType 	type;
-	int 		nverts;
-	int 		nsides;
-	Vertex		origin;		// origin and/or anchor
-	double		radius;		// for Circle				 
-	Vertex[] 	verts;		// TODO re-implement both these as Vectors
-	Line[] 		lines;
+	protected shapeType type;
+	protected int 		nverts;
+	protected int 		nsides;
+	protected Vertex	origin;		// origin and/or anchor
+	protected double	radius;		// for Circle				 
+	protected Vertex[] 	verts;		// TODO re-implement both these as Vectors
+	protected Line[] 	lines;
 	
 	/** name() - overloaded getter/setter
 	 * 
 	 * @return name - String
 	 */
-	
 	final public String name() {
 		return name;
 	}
@@ -53,7 +57,7 @@ abstract public class Shape implements MyShapes {
 	 * @param name  - String. if present sets name attribute
 	 * @return name - String
 	 */
-	public String name(String name) {
+	final public String name(String name) {
 		this.name = name;
 		return this.name;
 	}
@@ -73,9 +77,7 @@ abstract public class Shape implements MyShapes {
 	* @return double
 	*/
 	@Override
-	public double perimeter() {
-		return 0;
-	}// perimeter()
+	abstract public double perimeter();
 	
 	/** print()
 	* Prints details about the shape.

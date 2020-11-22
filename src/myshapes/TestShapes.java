@@ -49,23 +49,25 @@ public class TestShapes {
 			Shape.printShapes(myShapes);
 			
 			// Compare  t1 for t2
-			if (t1.compare(t2) == 1) {
+			if (t1.compare(t2) == Shape.LARGER) {
 				System.out.println( t1.name() + " is bigger than " + t2.name() );
 			}else {
-				if ( t1.compare(t2) != 0) {
+				if ( t1.compare(t2) != Shape.SAME) {
 					System.out.println( t1.name() + " is smaller than " + t2.name() );
 				}else {
+					// Shape.SMALLER
 					System.out.println( t1.name() + " is the same size as " + t2.name() );
 				}
 			}
 			
 			// Compare  c1 for t2
-			if (c1.compare(t2) == 1) {
+			if (c1.compare(t2) == Shape.LARGER) {
 				System.out.println( c1.name() + " is bigger than " + t2.name() );
 			}else {
-				if ( c1.compare(t2) != 0) {
+				if ( c1.compare(t2) != Shape.SAME) {
 					System.out.println( c1.name() + " is smaller than " + t2.name() );
 				}else {
+					// Shape.SMALLER
 					System.out.println( c1.name() + " is the same size as " + t2.name() );
 				}
 			}

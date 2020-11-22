@@ -12,7 +12,6 @@ public class Rectangle extends Quad {
 	*/
 	public Rectangle() {
 		super();
-		
 	}
 	
 	/** print()
@@ -23,6 +22,10 @@ public class Rectangle extends Quad {
 		
 	}
 	
+	/** area()
+	* 
+	*
+	*/
 	public double area() {
 		return 0;
 	};

@@ -7,14 +7,12 @@ package myshapes;
 */
 public class Circle extends Shape {
 	
-	
 	static double pi = Math.PI;
-	
 	
 	/**
 	* Constructor
 	*
-	* @param origin - Vertex - center of circle
+	* @param origin - Vertex - centre of circle
 	* @param radius - double
 	*/
 	public Circle(Vertex origin, double radius) {
@@ -22,38 +20,34 @@ public class Circle extends Shape {
 		this.radius = radius;
 		verts =  new Vertex[]{origin}; 	// one vertex at center
 		lines = null;					// lines array is null for circle
-	}
+	}//Circle()
 	
 	/**
 	* Constructor
 	*
-	* @param x - double - x co-ordinate of center of circle
-	* @param y - double - y co-ordinate of center of circle
+	* @param x - double - x co-ordinate of centre
+	* @param y - double - y co-ordinate of centre
 	* @param radius - double
 	*/
 	public Circle(double x, double y, double radius) {
 		this( new Vertex(x,y), radius);	// call constructor with (Vertex,double) params
-	}
-	
+	}//Circle()
 	
 	/** area()
 	* Returns the area of the shape.
 	*
 	* @return double
 	*/
-	public double area() {
-		
+	final public double area() {
 		return ( Math.pow(radius, 2) * pi);
 	}//area()
-
 	
 	/** perimeter()
 	* Returns the circumference.
 	*
 	* @return double
 	*/
-	public double perimeter() {
-		
+	final public double perimeter() {
 		return (2 * radius * pi);
 	}// perimeter()
 	
@@ -68,5 +62,4 @@ public class Circle extends Shape {
 		}
 	}//print
 	
-
 }

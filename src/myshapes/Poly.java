@@ -22,7 +22,7 @@ abstract public class Poly extends Shape{
 	* @return double
 	*/
 	@Override
-	public double perimeter() {
+	final public double perimeter() {
 		double per = 0;
 		
 		for(Line l : lines) {

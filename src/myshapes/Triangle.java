@@ -24,14 +24,15 @@ public class Triangle extends Poly {
 		lines[2] = new Line(v3,v1);
 	}
 	
-	public double area() {	
+	final public double area() {	
 		// Using Herons rule for area of triangle
-		double area = 1;
-		double s = this.perimeter()/2;
+		// area = sqrt( (per/2-l1)(per/2-l2)(per/2-l3) )
+		double area = 1;	// set to 1 because we are using iterative product in for loop
+		double per = this.perimeter()/2;
 		for(Line l: lines) {
-			area *= (s-l.length());
+			area *= (per-l.length());
 		}
-		area = Math.sqrt(s*area);
+		area = Math.sqrt(per*area);
 		
 		return area;
 	};

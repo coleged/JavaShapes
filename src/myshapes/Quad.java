@@ -1,7 +1,7 @@
 package myshapes;
 
 /** class Quad
-* A Class for 4 sided polygons
+* Abstract Class for 4 sided polygons
 *
 */
 abstract public class Quad extends Poly {
@@ -11,8 +11,8 @@ abstract public class Quad extends Poly {
 	*
 	*/
 	public Quad() {
-		nverts = 3;
-		nsides = 3;
+		nverts = 4;
+		nsides = 4;
 	}
 	
 	abstract public double area();

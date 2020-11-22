@@ -8,8 +8,8 @@ public class Point {
 	
 	private double X;
 	private double Y;
-	static long count = 0;
-	long ref;
+	private static long count = 0;
+	private long ref;
 	String label;
 	
 	/**
@@ -23,12 +23,28 @@ public class Point {
 		ref = ++count;
 	}
 	
+	/** setX() - setter
+	* set X coordinate.
+	*
+	*/
+	final void setX(double x) {
+		X = x;
+	}//setX()
+	
+	/** setY() - setter
+	* set Y coordinate.
+	*
+	*/
+	final void setY(double y) {
+		Y = y;
+	}//setY()
+	
 	/** X() - getter
 	* Get X coordinate.
 	*
 	* @return double
 	*/
-	public double X() {
+	final public double X() {
 		return X;
 	}
 	
@@ -37,12 +53,20 @@ public class Point {
 	*
 	* @return double
 	*/
-	public double Y() {
+	final public double Y() {
 		return Y;
 	}
 	
+	/** ref() - getter
+	* Get reference number for point.
+	*
+	* @return long
+	*/
+	final public long ref() {
+		return ref;
+	}
+	
 	/** print() 
-	* Get X coordinate.
 	*
 	* prints information about the Point object
 	*/
