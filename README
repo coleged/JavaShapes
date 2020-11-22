@@ -1,0 +1,39 @@
+
+First foray into Java. Just a random program used to chaeck out various features
+of the language as I read about it.
+
+								November 2020
+
+Developed in Eclipse - also a learning curve.
+
+
+# some notes on building java prog outside eclipse
+# manual building of a runnable jar file
+
+mkdir build		# if it doesn't exist already
+mkdir build/classes
+javac -sourcepath src -d build/classes src/myshapes/*.java
+# notice project is "myshapes" and TestShapes is the class file containing main()
+# the myshapes.TestShapes mirrors the dir structure myshapes/TestShapes.java
+java -cp build/classes/ myshapes.TestShapes
+mkdir build/jar
+jar cfm build/jar/TestShapes.jar shapesManifest -C build/classes .
+java -jar build/jar/TestShapes.jar 
+
+
+# now for doing the same with ant
+# see build.xml
+
+ant  clean
+ant  compile
+ant  jar
+ant  run
+
+# or 
+ant  clean compile jar run
+
+# Then you can run the jar directly with
+
+java -jar build/jar/TestShapes.jar 
+
+

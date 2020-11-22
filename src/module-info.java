@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author ecole
+ *
+ */
+module javaShapes {
+}
