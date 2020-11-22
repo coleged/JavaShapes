@@ -35,6 +35,12 @@ public class Circle extends Shape {
 		this( new Vertex(x,y), radius);	// call constructor with (Vertex,double) params
 	}
 	
+	
+	/** area()
+	* Returns the area of the shape.
+	*
+	* @return double
+	*/
 	public double area() {
 		
 		return ( Math.pow(radius, 2) * pi);
@@ -46,7 +52,6 @@ public class Circle extends Shape {
 	*
 	* @return double
 	*/
-	@Override
 	public double perimeter() {
 		
 		return (2 * radius * pi);
@@ -62,5 +67,6 @@ public class Circle extends Shape {
 			p.print();
 		}
 	}//print
+	
 
 }

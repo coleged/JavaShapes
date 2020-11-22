@@ -1,10 +1,12 @@
 package myshapes;
 
+import java.util.Vector;
+
 /** class Shape
 * Parent Class for all shapes
 *
 */
-public class Shape implements MyShapes {
+abstract public class Shape implements MyShapes {
 	
 	/** shape type
 	*
@@ -28,15 +30,12 @@ public class Shape implements MyShapes {
 								TRIANGLE }
 	
 	private String 		name;
-	shapeType 	type;
 	
+	shapeType 	type;
 	int 		nverts;
 	int 		nsides;
-	
 	Vertex		origin;		// origin and/or anchor
-	double		radius;		// for Circle
-						 
-	
+	double		radius;		// for Circle				 
 	Vertex[] 	verts;		// TODO re-implement both these as Vectors
 	Line[] 		lines;
 	
@@ -45,7 +44,7 @@ public class Shape implements MyShapes {
 	 * @return name - String
 	 */
 	
-	public String name() {
+	final public String name() {
 		return name;
 	}
 	
@@ -65,10 +64,7 @@ public class Shape implements MyShapes {
 	* @return double
 	*/
 	@Override
-	public double area() {
-		// TODO Auto-generated method stub
-		return 0;
-	}//area()
+	abstract public double area();
 
 	
 	/** perimeter()
@@ -97,7 +93,7 @@ public class Shape implements MyShapes {
 	/** compareTo()
 	* Compares area of this with Shape to.
 	*
-	* @Param to - Shape
+	* @param to - Shape
 	* @return int - -1 if this is smaller, +1 if larger and 0 is same size
 	* 
 	*/
@@ -109,5 +105,17 @@ public class Shape implements MyShapes {
 		// they are the same size
 		return 0;
 	}
+	
+	/** printShapes()
+	* 	Calls the print() method for every shape on the vector
+	*
+	* @param shapes - Vector of Shape
+	*/
+	public static void printShapes(Vector<Shape> shapes) {
+		for(Shape s: shapes) {
+			s.print();
+		}
+	}
+	
 	
 }// class

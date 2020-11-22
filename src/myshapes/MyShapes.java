@@ -44,6 +44,8 @@ public interface MyShapes {
 	* Compares this shape with to wrt area
 	* 
 	* returns -1 if this is smaller, 0 is the same and +1 if larger
+	* @param to - the shape to compare with
+	* @return int
 	*/
 	int compare(Shape to);
 

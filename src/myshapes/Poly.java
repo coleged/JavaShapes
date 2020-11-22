@@ -2,9 +2,11 @@ package myshapes;
 
 /** class Poly
 * Parent Class for all multi sided shapes
+* 
+* Abstract for now, but might find it is necessary to create objects of this Class
 *
 */
-public class Poly extends Shape{
+abstract public class Poly extends Shape{
 
 	/**
 	* Constructor
@@ -28,5 +30,8 @@ public class Poly extends Shape{
 		}	
 		return per;
 	}// perimeter()
+	
+
+	abstract public double area();
 
 }

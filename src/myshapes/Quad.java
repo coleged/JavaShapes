@@ -4,7 +4,7 @@ package myshapes;
 * A Class for 4 sided polygons
 *
 */
-public class Quad extends Poly {
+abstract public class Quad extends Poly {
 
 	/**
 	* Constructor
@@ -14,5 +14,7 @@ public class Quad extends Poly {
 		nverts = 3;
 		nsides = 3;
 	}
+	
+	abstract public double area();
 
 }

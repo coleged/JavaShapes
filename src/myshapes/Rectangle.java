@@ -22,5 +22,9 @@ public class Rectangle extends Quad {
 	public void print() {
 		
 	}
+	
+	public double area() {
+		return 0;
+	};
 
 }

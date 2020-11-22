@@ -81,6 +81,15 @@ public class Line extends Shape{
 		return cosA;
 	}//cosAngle()
 	
+	/** area()
+	* Returns the area of the shape.
+	*
+	* @return double
+	*/
+	public double area() {
+		return 0;
+	};
+	
 	/** print()
 	* Prints details about the Line. Overrides parent
 	*

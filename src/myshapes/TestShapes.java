@@ -46,42 +46,30 @@ public class TestShapes {
 			c1.name("Circle 1");
 			myShapes.add(c1);
 			
-			printShapes(myShapes);
+			Shape.printShapes(myShapes);
 			
 			// Compare  t1 for t2
 			if (t1.compare(t2) == 1) {
-				System.out.println("Triangle 1 is bigger that Triangle 2.");
+				System.out.println( t1.name() + " is bigger than " + t2.name() );
 			}else {
 				if ( t1.compare(t2) != 0) {
-					System.out.println("Triangle 1 is smaller that Triangle 2.");
+					System.out.println( t1.name() + " is smaller than " + t2.name() );
 				}else {
-					System.out.println("Triangle 1 is the same size as Triangle 2.");
+					System.out.println( t1.name() + " is the same size as " + t2.name() );
 				}
 			}
 			
 			// Compare  c1 for t2
 			if (c1.compare(t2) == 1) {
-				System.out.println("Circle 1 is bigger that Triangle 2.");
+				System.out.println( c1.name() + " is bigger than " + t2.name() );
 			}else {
 				if ( c1.compare(t2) != 0) {
-					System.out.println("Circle 1 is smaller that Triangle 2.");
+					System.out.println( c1.name() + " is smaller than " + t2.name() );
 				}else {
-					System.out.println("Circle 1 is the same size as Triangle 2.");
+					System.out.println( c1.name() + " is the same size as " + t2.name() );
 				}
 			}
 		
 	}
-	
-	/** printShapes()
-	* 	Calls the print() method for every shape on the vector
-	*
-	* @param shapes - Vector of Shape
-	*/
-	public static void printShapes(Vector<Shape> shapes) {
-		for(Shape s: shapes) {
-			s.print();
-		}
-	}
-	
 
 }
