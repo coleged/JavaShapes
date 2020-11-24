@@ -11,6 +11,7 @@ abstract public class Quad extends Poly {
 	*
 	*/
 	public Quad() {
+		super();
 		nverts = 4;
 		nsides = 4;
 	}

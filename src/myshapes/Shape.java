@@ -119,5 +119,16 @@ abstract public class Shape implements MyShapes {
 		}
 	}
 	
+	public boolean isValid() {
+		// test here is that all points must be unique
+		for(int n = 0; n < nverts; n++) {
+			for(int i = n+1; i < nverts; i++) {
+				if (verts[n].same(verts[i])) return false;
+			}
+			
+		}
+		return true;
+	}
+	
 	
 }// class

@@ -27,19 +27,32 @@ public class TestShapes {
 		
 		// Triangle 1
 			Vertex v1 = new Vertex(1,-5);
-			Vertex v2 = new Vertex(1,10);
-			Vertex v3 = new Vertex(11,0);
-			Triangle t1 = new Triangle(v1,v2,v3);
-			t1.name("Triangle 1");
-			myShapes.add(t1);
+			Vertex v2 = new Vertex(4,-7);
+			Vertex v3 = new Vertex(4,-7);
+			
+			try {
+				Triangle t1 = new Triangle(v1,v2,v3);
+				t1.name("Triangle 1");
+				myShapes.add(t1);
+			}
+			catch(InvalidShapeException exc) {
+				System.out.println("oops: " + exc.toString());
+				
+			}
+			
 	
 		// Triangle 2
 			v1 = new Vertex(0,0);
 			v2 = new Vertex(0,10);
 			v3 = new Vertex(10,0);
-			Triangle t2 = new Triangle(v1,v2,v3);
-			t2.name("Triangle 2");
-			myShapes.add(t2);
+			try {
+				Triangle t2 = new Triangle(v1,v2,v3);
+				t2.name("Triangle 2");
+				myShapes.add(t2);
+			}
+			catch(InvalidShapeException exc) {
+				System.out.println("oops: " + exc.toString());
+			}
 			
 		// Circle 1
 			Circle c1 = new Circle(0,0,3);
@@ -48,6 +61,8 @@ public class TestShapes {
 			
 			Shape.printShapes(myShapes);
 			
+			// TODO: pull these compares off the vector
+			/*
 			// Compare  t1 for t2
 			if (t1.compare(t2) == Shape.LARGER) {
 				System.out.println( t1.name() + " is bigger than " + t2.name() );
@@ -71,6 +86,7 @@ public class TestShapes {
 					System.out.println( c1.name() + " is the same size as " + t2.name() );
 				}
 			}
+			*/
 		
 	}
 

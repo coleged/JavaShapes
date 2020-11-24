@@ -48,6 +48,16 @@ public class Point {
 		return X;
 	}
 	
+	/** same() - getter
+	* Returns true if this point is the same as other
+	*
+	* @return boolean
+	*/
+	final public boolean same(Point other) {
+		if((this.X == other.X()) && (this.Y == other.Y())) return true;
+		return false;
+	}
+	
 	/** Y() - getter
 	* Get Y coordinate.
 	*

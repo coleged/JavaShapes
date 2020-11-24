@@ -4,7 +4,7 @@ package myshapes;
 * 3 sided shape
 *
 */
-public class Triangle extends Poly {
+public class Triangle  extends Poly {
 
 	/**
 	* Constructor
@@ -13,7 +13,7 @@ public class Triangle extends Poly {
 	* @param v2 - three vertices of the triangle
 	* @param v3 - three vertices of the triangle
 	*/
-	public Triangle(Vertex v1, Vertex v2, Vertex v3 ) {
+	public Triangle(Vertex v1, Vertex v2, Vertex v3 ) throws InvalidShapeException {
 		nverts = 3;
 		nsides = 3;
 		type = shapeType.TRIANGLE;
@@ -22,6 +22,7 @@ public class Triangle extends Poly {
 		lines[0] = new Line(v1,v2);
 		lines[1] = new Line(v2,v3);
 		lines[2] = new Line(v3,v1);
+		if(! isValid() ) throw new InvalidShapeException();
 	}
 	
 	final public double area() {	

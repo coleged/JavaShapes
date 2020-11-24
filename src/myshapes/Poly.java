@@ -13,7 +13,7 @@ abstract public class Poly extends Shape{
 	*
 	*/
 	public Poly() {
-		// TODO Auto-generated constructor stub
+	
 	}
 	
 	/** perimeter()
