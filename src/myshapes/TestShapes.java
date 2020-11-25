@@ -77,32 +77,21 @@ public class TestShapes {
 			
 			Shape.printShapes(myShapes);
 			
-			// TODO: pull these compares off the vector
-			/*
-			// Compare  t1 for t2
-			if (t1.compare(t2) == Shape.LARGER) {
-				System.out.println( t1.name() + " is bigger than " + t2.name() );
-			}else {
-				if ( t1.compare(t2) != Shape.SAME) {
-					System.out.println( t1.name() + " is smaller than " + t2.name() );
-				}else {
-					// Shape.SMALLER
-					System.out.println( t1.name() + " is the same size as " + t2.name() );
+			for(Shape s : myShapes) {
+				for( Shape q : myShapes) {
+					if (s.compare(q) == Shape.LARGER) {
+						System.out.println( s.name() + " is bigger than " + q.name() );
+					}else {
+						if ( s.compare(q) != Shape.SAME) {
+							System.out.println( s.name() + " is smaller than " + q.name() );
+						}else {
+							// Shape.SMALLER
+							System.out.println( s.name() + " is the same size as " + q.name() );
+						}
+					}
 				}
 			}
 			
-			// Compare  c1 for t2
-			if (c1.compare(t2) == Shape.LARGER) {
-				System.out.println( c1.name() + " is bigger than " + t2.name() );
-			}else {
-				if ( c1.compare(t2) != Shape.SAME) {
-					System.out.println( c1.name() + " is smaller than " + t2.name() );
-				}else {
-					// Shape.SMALLER
-					System.out.println( c1.name() + " is the same size as " + t2.name() );
-				}
-			}
-			*/
 		
 	}
 
