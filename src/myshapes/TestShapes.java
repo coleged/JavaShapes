@@ -1,4 +1,15 @@
 package myshapes;
+/**
+ * 
+ * TestShapes.java	- quick test program for the myshapes package
+ * 
+ * TODO:
+ * 
+ * 	Manually check the maths, esp. the area calculation for triangle
+ * 
+ * @author colege@gmail.com
+ * 
+ */
 
 import java.util.*;  
 
@@ -26,9 +37,9 @@ public class TestShapes {
 		firstLine.print();
 		
 		// Triangle 1
-			Vertex v1 = new Vertex(1,-5);
-			Vertex v2 = new Vertex(4,-7);
-			Vertex v3 = new Vertex(4,-7);
+			Vertex v1 = new Vertex(1,-605);
+			Vertex v2 = new Vertex(4,80);
+			Vertex v3 = new Vertex(4,-47);
 			
 			try {
 				Triangle t1 = new Triangle(v1,v2,v3);
@@ -36,7 +47,7 @@ public class TestShapes {
 				myShapes.add(t1);
 			}
 			catch(InvalidShapeException exc) {
-				System.out.println("oops: " + exc.toString());
+				System.out.println("Triangle - oops: " + exc.toString());
 				
 			}
 			
@@ -51,13 +62,18 @@ public class TestShapes {
 				myShapes.add(t2);
 			}
 			catch(InvalidShapeException exc) {
-				System.out.println("oops: " + exc.toString());
+				System.out.println("Triangle - oops: " + exc.toString());
 			}
 			
 		// Circle 1
-			Circle c1 = new Circle(0,0,3);
-			c1.name("Circle 1");
-			myShapes.add(c1);
+			try {
+				Circle c1 = new Circle(0,0,34);
+				c1.name("Circle 1");
+				myShapes.add(c1);
+			}
+			catch(InvalidShapeException exc) {
+				System.out.println("Circle - oops: " + exc.toString());
+			}
 			
 			Shape.printShapes(myShapes);
 			

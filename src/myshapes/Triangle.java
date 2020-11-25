@@ -12,6 +12,8 @@ public class Triangle  extends Poly {
 	* @param v1 - three vertices of the triangle
 	* @param v2 - three vertices of the triangle
 	* @param v3 - three vertices of the triangle
+	* @throws InvalidShapeException - if any two vertices are coincident
+	*  
 	*/
 	public Triangle(Vertex v1, Vertex v2, Vertex v3 ) throws InvalidShapeException {
 		nverts = 3;

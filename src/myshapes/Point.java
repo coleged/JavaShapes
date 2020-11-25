@@ -49,8 +49,9 @@ public class Point {
 	}
 	
 	/** same() - getter
-	* Returns true if this point is the same as other
-	*
+	* Returns true if this point is the same as other, i.e. exact same values for X and Y
+	* 
+	* @param other - Point to compare with
 	* @return boolean
 	*/
 	final public boolean same(Point other) {

@@ -119,6 +119,13 @@ abstract public class Shape implements MyShapes {
 		}
 	}
 	
+	/**
+	 * 
+	 * isValid tests that a valid enclosed shape made from contained vertices
+	 * overloaded by Circle subclass which is a special case.
+	 * @return boolean
+	 * 
+	 */
 	public boolean isValid() {
 		// test here is that all points must be unique
 		for(int n = 0; n < nverts; n++) {
